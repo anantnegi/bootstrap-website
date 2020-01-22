@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image" href="img/icons/favicon.png">
+        <title>Title Here</title>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+		<nav class="navbar navbar-expand-sm navbar-warning fixed-top bg-warning text-white">
+		  <ul class="navbar-nav">
+			<li class="nav-item">
+			  <a class="nav-link" href="#section1">About Us</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#section2">Process</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#section3">Help</a>
+			</li>
+		  </ul>
+		</nav>
+
+		<div id="section1" class="container-fluid section" style="padding-top:20px;padding-bottom:70px">
+		  <!-- Section1 About Us-->
+		  <div class="card">
+				<div class="card-header bg-warning">About</div>
+				<div class="card-body">
+					<div class="container-fluid section1 text-center">
+						<div>
+							<h5>L<img src="images/heart.png" width="24"/>VE LETTERS</h5>
+						</div>
+						<div class="center-image" style="margin-bottom: 40px">
+							<img src="images/loveletters.png" width="80" />
+						</div>
+						<div>
+							<h5>TOGETHER, WE CAN TACKLE HUNGER</h5>
+						</div>	
+					</div>
+				</div>
+			</div>
+		<!-- end Section1 -->
+		</div>
+		<div id="section2" class="section container-fluid" style="padding-top:70px;padding-bottom:70px">
+		<div class="card">
+				<div class="card-header bg-warning">Process</div>
+				<div class="card-body">
+					<div class="container-fluid section1 text-center">
+						<div class="row bs-wizard" style="border-bottom:0; display: -webkit-inline-box;">               
+						<div class="col-xs-3 bs-wizard-step complete" style="width: 208px">
+							<div class="bs-wizard-info text-center"><img style="position: absolute; bottom: 52px; left: 70px;" src="images/food.png" width="70" class="zoom" /></div>
+						  <div class="progress"><div class="progress-bar"></div></div>
+						  <a href="#section3" class="bs-wizard-dot"></a>                  
+						  <div class="text-center bs-wizard-stepnum">DONATE</div>
+						</div>
+						
+						<div class="col-xs-3 bs-wizard-step complete"><!-- complete -->                  
+						  <div class="bs-wizard-info text-center">
+						  <img style="position: absolute; bottom: 52px; left: 27px;" class="zoom" src="images/delivery.png" width="70" />
+						  <img style="position: absolute; bottom: 52px; right: 20px;" class="zoom" src="images/warehouse.png" width="70" />
+						  </div>
+						  <div class="progress"><div class="progress-bar"></div></div>
+						  <a href="#section3" class="bs-wizard-dot"></a>
+						  <div class="text-center bs-wizard-stepnum">STORING AND SORTING</div>
+						</div>
+						
+						<div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+						  <div class="bs-wizard-info text-center">
+						  <img style="position: absolute; bottom: 52px; left: 27px;" class="zoom" src="images/help (1).png" width="70" />
+						  <img style="position: absolute; bottom: 52px; right: 20px;" class="zoom" src="images/shipping-and-delivery.png" width="70" />
+						  </div>
+						  <div class="progress"><div class="progress-bar"></div></div>
+						  <a href="#section3" class="bs-wizard-dot"></a>
+						  <div class="text-center bs-wizard-stepnum">DELIVERY</div>
+						</div>
+						
+						<div class="col-xs-3 bs-wizard-step active"><!-- active -->
+						  <div class="bs-wizard-info text-center"><img style="position: absolute; bottom: 52px; left: 61px;" class="zoom" src="images/mother.png" width="70" /></div>
+						  <div class="progress"><div class="progress-bar"></div></div>
+						  <a href="#section3" class="bs-wizard-dot"></a>
+						  <div class="text-center bs-wizard-stepnum">GIVING</div>                  
+						</div>
+					</div>	
+				</div>
+			</div>
+			</div>				
+		</div>
+		
+		<!-- Section2 -->
+		<div id="section3" class="container-fluid section2 section" style="padding-top:70px;padding-bottom:70px">
+			<div class="card">
+				<div class="card-header bg-warning">Help</div>
+				<div class="card-body">
+					<div class="text-center" style="padding: 20px 0">I WOULD LIKE TO...</div>
+					<div class="row justify-content-md-center card-deck">
+					  <div class="col-sm-3 card bg-grey">
+						<div class="card-body text-center">
+						  <img src="images/volunteer.png" width="100" />
+						  <p class="card-text">VOLUNTEER</p>
+						  <div class="text-center" style="width: 100%">					
+							<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#volunteerModal" data-whatever="@getbootstrap">CONTINUE</button>		
+						  </div>
+						</div>
+					  </div>
+					  <div class="col-sm-3 card bg-grey">
+						<div class="card-body text-center">
+						  <img src="images/food.png" width="100" />
+						  <p class="card-text">DONATE FOOD</p>
+						  <div class="text-center" style="width: 100%">
+							<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#foodModal" data-whatever="@getbootstrap">CONTINUE</button>
+						  </div>
+						</div>
+					  </div>
+					  <div class="col-sm-3 card bg-grey">
+						<div class="card-body text-center">
+						  <img src="images/credit_card.png" width="100" />
+						  <p class="card-text">DONATE MONEY</p>
+						  <div class="text-center" style="width: 100%">					
+							<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#moneyModal" data-whatever="@getbootstrap">CONTINUE</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				</div> 
+		    </div>			
+		</div>
+		
+		<!-- Volunteers -->
+		
+		<div class="modal fade" id="volunteerModal" tabindex="-1" role="dialog" aria-labelledby="volunteerModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">			
+			  <div class="modal-body" style="padding: 20px">
+				<div class="text-center" style="padding: 20px 0"><h4><strong>PLEASE FILL IN YOUR PARTICULARS</strong></h4>
+				<button type="button" class="close text-right" data-dismiss="modal" style="position: absolute;top: 6px;right: 8px;" >&times;</button>
+				</div>
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text"><img src="images/name.png" width="15" /></span>
+				  </div>
+				  <input type="text" class="form-control" placeholder="Full Name" id="register-full-name" name="register-full-name">
+				</div>
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text"><img src="images/mail.png" width="15" /></span>
+				  </div>
+				  <input type="text" class="form-control" placeholder="Email Address" id="register-email" name="register-email">
+				</div>
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text"><img src="images/password.png" width="15" /></span>
+				  </div>
+				  <input type="text" class="form-control" placeholder="Password" id="register-password" name="register-password">
+				</div>
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text"><img src="images/password.png" width="15" /></span>
+				  </div>
+				  <input type="text" class="form-control" placeholder="Re-enter Password" id="register-repeated-password" name="register-repeated-password">
+				</div>
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text"><img src="images/telephone.png" width="15" /></span>
+				  </div>
+				  <input type="text" class="form-control" placeholder="Phone Number" id="register-phone-number" name="register-phone-number">
+				</div>
+				
+				<div class="mb-3">
+					<div class="" style="width: 100%"><button type="button" class="btn btn-warning">CONTINUE</button></div>
+				</div>
+				
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<!-- end Volunteers -->
+		
+		<!-- money section -->
+		<div class="modal fade" id="moneyModal" tabindex="-1" role="dialog" aria-labelledby="moneyModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">			  
+			  <div class="modal-body" style="padding: 80px 0">
+				  <div class="row justify-content-md-center card-deck">
+						<button type="button" class="close text-right" data-dismiss="modal" style="position: absolute;top: 6px;right: 8px;" >&times;</button>
+					  <div class="col-sm-3 card bg-grey">
+						<div class="card-body text-center">
+						  <img src="images/paypal.jpg" width="150" />
+						  <p class="card-text">PAYPAL</p>
+						  <div class="text-center" style="width: 100%"><button type="button" class="btn btn-warning">CONTINUE</button></div>
+						</div>
+					  </div>
+					  <div class="col-sm-3 card bg-grey">
+						<div class="card-body text-center">
+						  <img src="images/credit_card.png" width="100" />
+						  <p class="card-text">CREDIT CARD</p>
+						  <div class="text-center" style="width: 100%"><button type="button" class="btn btn-warning">CONTINUE</button></div>
+						</div>
+					  </div>
+					</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Large modal -->
+
+		<div class="modal fade" id="foodModal" tabindex="-1" role="dialog" aria-labelledby="foodModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+			  <div class="modal-body">
+				<div class="food-details">
+					<div class="text-center food-details-heading"><h4><strong>Donate Food Details</strong></h4></div>
+					<button type="button" class="close text-right" data-dismiss="modal" style="position: absolute;top: 6px;right: 8px;" >&times;</button>
+					<form>
+					  <div class="form-group">
+						<label for="food-item" class="col-form-label">Food Item(Please specify, "5 Tins of Milo")</label>
+						<input type="text" class="form-control" id="food-item">
+					  </div>
+					  <div class="form-group">
+						<label for="preferred-time" class="col-form-label">Preferred Time</label>
+						<select class="form-control" id="preferred-time">
+							<option value="9am-11am">9am-11am</option>
+							<option value="11am-1pm">11am-1pm</option>
+							<option value="11am-1pm">1pm-3pm</option>
+							<option value="11am-1pm">3pm-5pm</option>
+							<option value="11am-1pm">5pm-7pm</option>
+							<option value="11am-1pm">7pm-9pm</option>
+							<option value="11am-1pm">9pm-11pm</option>
+						</select>
+					  </div>
+					  
+					  <div class="form-group">
+					  <label for="date" class="col-form-label">Date</label>
+						  <div class="input-group mb-3">				  	
+						  <input type="text" class="form-control datepicker" placeholder="Date" id="date" name="date" data-date-format="dd-M-yyyy" readonly>
+						  <div class="input-group-append">
+							<span class="input-group-text"><i class="fa fa-calendar"></i></span>
+						  </div>
+						</div>
+					   </div>
+					   
+					  <div class="form-group">
+					  <label for="expiry-date" class="col-form-label">Expiry Date ( Please make sure it is at least 6 months before expiry )</label>
+						  <div class="input-group mb-3">				  	
+						  <input type="text" class="form-control datepicker" placeholder="Expiry Date" id="expiry-date" name="expiry-date" data-date-format="dd-M-yyyy" readonly>
+						  <div class="input-group-append">
+							<span class="input-group-text"><i class="fa fa-calendar"></i></span>
+						  </div>
+						</div>
+					   </div>			
+					
+					</form>
+				</div>
+			  </div>
+			  <div class="text-center" style="padding-bottom: 35px;">
+				<div class="text-center" style="width: 100%"><button type="button" class="btn btn-warning">Submit</button></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- <script src="app.js"></script> -->
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="style.js" ></script>		
+    </body>
+</html>
