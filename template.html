@@ -31,8 +31,8 @@
 						<div>
 							<h5>L<img src="images/heart.png" width="24"/>VE LETTERS</h5>
 						</div>
-						<div class="center-image" style="margin-bottom: 40px">
-							<img src="images/loveletters.png" width="80" />
+						<div class="center-image" style="margin-bottom: 30px">
+							<img src="images/loveletters.png" width="80" height="80"/>
 						</div>
 						<div>
 							<h5>TOGETHER, WE CAN TACKLE HUNGER</h5>
@@ -115,7 +115,7 @@
 					  <div class="col-sm-3 card bg-grey">
 						<div class="card-body text-center">
 						  <img src="images/credit_card.png" width="100" />
-						  <p class="card-text">DONATE MONEY</p>
+						  <p class="card-text" style="white-space: pre">DONATE MONEY</p>
 						  <div class="text-center" style="width: 100%">					
 							<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#moneyModal" data-whatever="@getbootstrap">CONTINUE</button>
 						  </div>
@@ -188,14 +188,16 @@
 						<div class="card-body text-center">
 						  <img src="images/paypal.jpg" width="150" />
 						  <p class="card-text">PAYPAL</p>
-						  <div class="text-center" style="width: 100%"><button type="button" class="btn btn-warning">CONTINUE</button></div>
+						  <div class="text-center" style="width: 100%"><button type="button" class="btn btn-warning" onClick="$('#moneyModal').modal('hide'); $('#paypalModal').modal('show');">CONTINUE</button></div>
 						</div>
 					  </div>
 					  <div class="col-sm-3 card bg-grey">
 						<div class="card-body text-center">
 						  <img src="images/credit_card.png" width="100" />
 						  <p class="card-text">CREDIT CARD</p>
-						  <div class="text-center" style="width: 100%"><button type="button" class="btn btn-warning">CONTINUE</button></div>
+						  <div class="text-center" style="width: 100%">
+						  <button type="button" class="btn btn-warning" onClick="$('#moneyModal').modal('hide'); $('#creditCardModal').modal('show');">CONTINUE</button>							  
+						  </div>
 						</div>
 					  </div>
 					</div>
@@ -261,6 +263,178 @@
 		  </div>
 		</div>
 		
+		<!-- Credit Card Donation Gateway -->
+		<div class="modal fade" id="creditCardModal" tabindex="-1" role="dialog" aria-labelledby="creditCardModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+			  <div class="modal-body">
+				<!--<div class="card-header bg-warning text-white">Credit Card</div> -->
+				<div class="cards">					
+					<div class="credit-card">
+						<div class="text-center food-details-heading"><h4><strong>Donation Gateway</strong></h4></div>
+						<button type="button" class="close text-right" data-dismiss="modal" style="position: absolute;top: 6px;right: 8px;" >&times;</button>
+						<form action="">
+						  <div class="form-group">
+							<label for="select-amt">Select An Amount</label>						
+							<div class="btn-group" style="display: block" role="group" aria-label="Basic example">
+							  <button type="button" class="btn btn-warning select_amt text-white" data-value="5">$5</button>
+							  <button type="button" class="btn btn-warning select_amt text-white" data-value="25">$25</button>
+							  <button type="button" class="btn btn-warning select_amt text-white" data-value="50">$50</button>
+							  <button type="button" class="btn btn-warning select_amt text-white" data-value="100">$100</button>
+							</div>
+							<input name="select_amt" type="hidden"/>
+						  </div>
+						  <div class="form-group">
+							<label for="food-item" class="col-form-label">Other Amount</label>						
+							<div class="input-group mb-3">				  	
+							  <div class="input-group-append">
+								<span class="input-group-text">$</span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Enter An Amount" id="food-item">
+							</div>
+						  </div>
+						  <div class="form-group">
+							<label for="select-a-card" class="col-form-label">Please Select A Card:</label>
+							<select class="form-control" id="select-a-card" placeholder="Visa, Master, American Express, Discover">
+								<option value="9am-11am">Visa</option>
+								<option value="11am-1pm">Master</option>
+								<option value="11am-1pm">American Express</option>
+								<option value="11am-1pm">Discover</option>							
+							</select>
+						  </div>
+						  <div class="form-group">
+							<label for="card-full-name" class="col-form-label">Card Holder Name:</label>						
+							<div class="input-group mb-3">				  	
+							  <div class="input-group-append">
+								<span class="input-group-text">$</span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Full Name" id="card-full-name">
+							</div>
+						  </div>
+						  <div class="form-group">
+							<label for="card-number" class="col-form-label">Card Number:</label>						
+							<div class="input-group mb-3">				  	
+							  <div class="input-group-append">
+								<span class="input-group-text">$</span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Card Number" id="card-number">
+							</div>
+						  </div>
+						   
+						  <div class="form-group row">
+						   <div class="col">
+							  <label for="expiry-date" class="col-form-label">Expiry Date:</label>
+								  <div class="input-group">
+								  <input type="text" class="form-control" placeholder="00/00" id="month-year" name="expiry-date" data-date-format="mm/yy" readonly>
+								  <div class="input-group-append">
+									<span class="input-group-text"><i class="fa fa-calendar"></i></span>
+								  </div>
+								</div>
+						   </div>						   
+						   <div class="col">
+						    <label for="security-cvv" class="col-form-label">Security Code (CVV):</label>
+							<div class="input-group">				  	
+							  <div class="input-group-append">
+								<span class="input-group-text">$</span>
+							  </div>
+							  <input type="number" class="form-control" placeholder="000" id="security-cvv">
+							</div>
+						   </div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			  </div>
+			  <div class="text-center" style="padding-bottom: 35px;">
+				<div class="text-center" style="width: 100%"><button type="button" class="btn btn-warning">Donate</button></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Credit Card Donation Gateway ends -->
+		
+		<!-- Paypal Donation Gateway -->
+		<div class="modal fade" id="paypalModal" tabindex="-1" role="dialog" aria-labelledby="paypalModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+			  <div class="modal-body">
+				<!--<div class="card-header bg-warning text-white">Credit Card</div> -->
+				<div class="cards">					
+					<div class="credit-card">
+						<div class="text-center food-details-heading"><h4><strong>Donation Gateway</strong></h4></div>
+						<button type="button" class="close text-right" data-dismiss="modal" style="position: absolute;top: 6px;right: 8px;" >&times;</button>
+						<form>
+						  <div class="form-group">
+							<label for="food-item">Select An Amount</label>						
+							<div class="btn-group" style="display: block" role="group" aria-label="Basic example">
+							  <button type="button" class="btn btn-warning text-white">$5</button>
+							  <button type="button" class="btn btn-warning text-white">$25</button>
+							  <button type="button" class="btn btn-warning text-white">$50</button>
+							  <button type="button" class="btn btn-warning text-white">$100</button>
+							</div>
+						  </div>
+						  <div class="form-group">
+							<label for="food-item" class="col-form-label">Other Amount</label>						
+							<div class="input-group mb-3">				  	
+							  <div class="input-group-append">
+								<span class="input-group-text">$</span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Enter An Amount" id="food-item">
+							</div>
+						  </div>
+						  <div class="form-group">
+							<label for="card-full-name" class="col-form-label">Card Holder Name:</label>						
+							<div class="input-group mb-3">				  	
+							  <div class="input-group-append">
+								<span class="input-group-text">$</span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Full Name" id="card-full-name">
+							</div>
+						  </div>
+						  <div class="form-group">
+							<label for="card-number" class="col-form-label">Email:</label>						
+							<div class="input-group mb-3">				  	
+							  <div class="input-group-append">
+								<span class="input-group-text">$</span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="Email Address" id="card-number">
+							</div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			  </div>
+			  <div class="text-center" style="padding-bottom: 35px;">
+				<div class="text-center" style="width: 100%"><button type="button" class="btn btn-warning">Donate</button></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Paypal Donation Gateway ends -->
+		
+		<!-- Transaction Successful -->
+		<div class="modal fade" id="transactionSuccessModal" tabindex="-1" role="dialog" aria-labelledby="transactionSuccessModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+			  <div class="modal-body">
+				<!--<div class="card-header bg-warning text-white">Credit Card</div> -->
+				<div class="cards">					
+					<div class="credit-card">					
+						<button type="button" class="close text-right" data-dismiss="modal" style="position: absolute;top: 6px;right: 8px;" >&times;</button>
+						<div style="padding: 15%" class="text-center">
+							<p>Transaction Successful!</p>
+							<img width="100" height="100" style="margin-bottom: 5px"/>
+							<p>Hi Tom, Thank you for your Support!
+							</br>
+							Your Donation of $5 has been processed.</p>
+						</div>
+					</div>
+				</div>
+			  </div>			  
+			</div>
+		  </div>
+		</div>
+		<!-- Transaction Successful ends -->
 		
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -271,6 +445,48 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 		<link href="style.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="style.js" ></script>		
+		<script type="text/javascript" src="style.js" ></script>	
+			<style>			
+			.form-group .btn-group>.btn {
+				margin-left: 8px;
+			}
+			.form-group .btn-group>.btn:first-child {
+				margin-left: 0;
+			}
+			#creditCardModal .select_amt.active {
+				background-color: #218838;
+				border-color: #1e7e34;
+			}
+			</style>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$('#transactionSuccessModal').modal('show')
+				})
+				
+				$("#month-year").datepicker({
+					format: "mm/yy",
+					viewMode: "months", 
+					minViewMode: "months"
+				});
+				
+				$('#security-cvv').on('keydown', function (e) {
+					console.log(e.which, 'e.which')
+					let arr = [8, 46, 37, 38, 39, 40];
+					if(arr.includes(e.which)) {
+					} else if($(this).val().length >= 3) {
+						e.preventDefault();
+					}
+				});
+				
+				$('#creditCardModal .select_amt').on('click', function () {
+					$('#creditCardModal .select_amt').removeClass('active');
+					$(this).addClass('active');
+					$('#creditCardModal [name="select_amt"]').val($(this).data('value'));
+				})
+				
+				$('#creditCardModal').on('', function () {
+					$('name="select_amt"').val();
+				});
+			</script>
     </body>
 </html>
